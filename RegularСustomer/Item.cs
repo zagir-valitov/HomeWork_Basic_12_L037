@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace RegularСustomer;
 
-internal class Customer
+internal class Item
 {
-    public void OnItemChanged(Item product)
-    {
-        
-    }
+    public int Id { get; set; }
+    public string? Name { get; set; }
 }
