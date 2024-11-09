@@ -10,10 +10,18 @@ shop.Products.CollectionChanged += customer1.OnItemChanged;
 do
 {
     Console.WriteLine("\nList of products:");
-    foreach (var item in shop.Products)
+    if (shop.Products.Count == 0)
     {
-        Console.WriteLine($"ID: {item.Id}\tName: {item.Name}");
+        Console.WriteLine(" !!!Empty!!!");
     }
+    else
+    {
+        foreach (var item in shop.Products)
+        {
+            Console.WriteLine($"ID: {item.Id}\tName: {item.Name}");
+        }
+    }    
+
     Console.Write(
         "\n-----------------------------" +
         "\nА - add product" +
@@ -21,26 +29,24 @@ do
         "\nX - exit" +
         "\n-----------------------------" +
         "\nEnter command: ");
-    string? command = Console.ReadLine();
-    if (command == "A")
+
+    string? inputLine = Console.ReadLine();
+    if (inputLine == "A")
     {
         Console.WriteLine("\nEnter product name to add:");
-        command = Console.ReadLine();
-        shop.Add(command);
+        inputLine = Console.ReadLine();
+        shop.Add(inputLine);
     }
-    else if (command == "D")
+    else if (inputLine == "D")
     {
         Console.WriteLine("\nEnter product ID to delete: ");
-        command = Console.ReadLine();
-        shop.Remove(Convert.ToInt32(command));
+        inputLine = Console.ReadLine();
+        shop.Remove(Convert.ToInt32(inputLine));
     }
-    else if (command == "X")
+    else if (inputLine == "X")
     {
         Console.WriteLine("Exit!");
         break;
     }
 }
 while (true);
-
-//shop.Add("Tomato");
-//shop.Remove(1);
