@@ -35,7 +35,7 @@ do
     {
         Console.WriteLine("\nEnter product name to add:");
         inputLine = Console.ReadLine();
-        shop.Add(inputLine);
+        shop.Add($"{inputLine} on {DateTime.Now}");
     }
     else if (inputLine == "D")
     {

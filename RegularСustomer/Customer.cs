@@ -11,7 +11,7 @@ internal class Customer
             case NotifyCollectionChangedAction.Add:
                 if (e.NewItems?[0] is Item newProduct)
                 {
-                    Console.WriteLine($"Added {newProduct.Name} on {DateTime.Now}");
+                    Console.WriteLine($"Added {newProduct.Name}");
                 }
                 break;
             case NotifyCollectionChangedAction.Remove:
