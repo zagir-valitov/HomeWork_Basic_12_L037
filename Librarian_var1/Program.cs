@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 
-Console.WriteLine(" ---- Home work 12. Librarian var 1 ----");
+Console.WriteLine(" ---- Home work 12. Librarian var. 1 ----");
 
 ConcurrentDictionary<string, int> books = new();
 CancellationTokenSource cts = new();
