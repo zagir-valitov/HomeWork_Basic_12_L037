@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 
-Console.WriteLine(" ---- Home work 12. Librarian var 2 ----");
+Console.WriteLine(" ---- Home work 12. Librarian var. 2 ----");
 
 ConcurrentDictionary<string, int> books = new();
 bool showBookList = true;
