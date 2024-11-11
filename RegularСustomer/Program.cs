@@ -2,7 +2,6 @@
 
 Console.WriteLine(" ---- Home work 12. Regular customer ----\n");
 
-
 var shop = new Shop();
 var customer1 = new Customer();
 shop.Products.CollectionChanged += customer1.OnItemChanged;
